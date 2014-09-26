@@ -21,17 +21,18 @@ module part1(){
 
 	
 	union(){
+		//cylinder
 		cylinder(height,radius,radius,true);
 		
+		//cube
 		translate([0,0,height/2+cubeHeight/2])
 				cube([radius-1,radius-1,cubeHeight],true);
 
+		//sphere
 		translate([0,0,-(height/2+sphereRadius-2)])
 			sphere1(sphereRadius);
 	}
 	
-
-	//sphere1(7);
 };
 
 part1();
