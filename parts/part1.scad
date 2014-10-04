@@ -22,14 +22,17 @@ module part1(){
 	
 	union(){
 		//cylinder
-		cylinder(height,radius,radius,true);
-		
+		union(){
+			cylinder(height,radius,radius,true);
+			cylinder(3,radius+2, radius+2, true);
+		}
 		//cube
 		translate([0,0,height/2+cubeHeight/2])
 				cube([radius-1,radius-1,cubeHeight],true);
 
 		//sphere
 		translate([0,0,-(height/2+sphereRadius-2)])
+			//cylinder(sphereRadius*2, sphereRadius, sphereRadius);
 			sphere1(sphereRadius);
 	}
 	
